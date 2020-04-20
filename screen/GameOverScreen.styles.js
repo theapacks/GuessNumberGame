@@ -6,6 +6,7 @@ export default styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        paddingVertical: 10,
     },
     buttonContainer: {
         flexDirection: 'row',

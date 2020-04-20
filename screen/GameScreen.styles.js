@@ -37,5 +37,12 @@ export default styles = StyleSheet.create({
         margin: 5,
         borderRadius: 15,
         alignItems: 'center'
+    },
+    landscapControls: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        width: '80%',
+        alignItems: 'center',
+
     }
 });
