@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Platform } from 'react-native';
 
 import styles from './Header.styles';
 
 const Header = props => {
     return (
-      <View style={styles.header}>
+      <View style={{...styles.header, ...Platform.select({ios: styles.headerIOS, android: styles.headerAndroid})}}>
         <Text style={styles.headerTitle}>{props.title}</Text>
       </View>
     );
