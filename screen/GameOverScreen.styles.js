@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import Colors from '../constants/colors';
 
 export default styles = StyleSheet.create({
@@ -11,8 +11,9 @@ export default styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around',
         marginTop: 20,
-        width: 300,
-        maxWidth: '80%',
+        minWidth: 300,
+        maxWidth: '95%',
+        width: '80%',
     },    
     image: {
         width: '100%',
@@ -20,14 +21,18 @@ export default styles = StyleSheet.create({
 
     },
     imageContainer: {
-        width: 300,
-        height: 300,
-        borderRadius: 150,
+        width: Dimensions.get('window').width * 0.7,
+        height: Dimensions.get('window').width * 0.7,
+        borderRadius: Dimensions.get('window').width * 0.7 / 2,
         overflow: 'hidden',
-        marginVertical: 10,
+        marginVertical: Dimensions.get('window').height / 30,
     },
     resultsText: {
-        fontSize: 20,
+        fontSize: Dimensions.get('window').height < 400 ? 16 : 20,
+    },
+    resultsContainer: {
+        marginVertical: Dimensions.get('window').width / 60,
+        marginHorizontal:   40,
     },
     highlight: {
         color: Colors.primary,

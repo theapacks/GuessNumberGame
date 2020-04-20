@@ -62,6 +62,4 @@ const StartGameScreen = props => {
   );
 };
 
-
-
 export default StartGameScreen;
